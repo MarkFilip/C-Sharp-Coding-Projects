@@ -1,0 +1,100 @@
+﻿@model NFLStats.Models.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.FirstName @Model.LastName</h2>
+
+<div>
+	<div class="row">
+		<div class="col-md-6">
+			<img src="@Model.Picture" />
+		</div>
+		<div class="col-md-6">
+			<dl>
+
+				<dt>
+					@Html.DisplayNameFor(model => model.Position)
+				</dt>
+
+				<dd>
+					@Html.DisplayFor(model => model.Position)
+				</dd>
+
+				<dt>
+					@Html.DisplayNameFor(model => model.JerseyNumber)
+				</dt>
+
+				<dd>
+					@Html.DisplayFor(model => model.JerseyNumber)
+				</dd>
+
+				<dt>
+					@Html.DisplayNameFor(model => model.TeamID)
+				</dt>
+
+				<dd>
+					@Html.DisplayFor(model => model.TeamID)
+				</dd>
+			</dl>
+		</div>
+	</div>
+		<hr />
+		<dl>
+			<dt>
+				Stats
+			</dt>
+			<dd>
+				<table class="table">
+					<tr>
+						<th>Game</th>
+						<th>Passing Yds</th>
+						<th>Passing TDs</th>
+						<th>Rushing Yds</th>
+						<th>Rusing TDs</th>
+						<th>Receptions</th>
+						<th>Receiving Yds</th>
+						<th>Receiving TDs</th>
+					</tr>
+					@foreach (var item in Model.Statistics)
+					{
+						<tr>
+							<td>
+								@Html.DisplayFor(modelItem => item.GameID)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.PassYds)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.PassTDs)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.RushYds)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.RushTDs)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Receptions)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.RecYds)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.RecTDs)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.PassTDs)
+							</td>
+						</tr>
+					}
+				</table>
+			</dd>
+		</dl>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

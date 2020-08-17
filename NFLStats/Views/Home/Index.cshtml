@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br>
+<div class="jumbotron">
+    
+    <h1>Fantasy Tracker</h1>
+    <p class="lead">Welcome to Fantasy Tracker! A place where you can upload stats of all of your favorite players to keep track of their progress throughout the season.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Teams</h2>
+        <p>
+            You can navigate through all 32 NFL teams and sort through their list of Players
+        </p>
+        @Html.ActionLink("Teams", "Index", "Teams", new { @class = "btn btn-default" })
+    </div>
+	<div class="col-md-6">
+		<h2>Players</h2>
+		<p>If you know what specific player you want, you can navigate to their page directly</p>
+		<a>@Html.ActionLink("Players", "Index", "Player", new { @class = "btn btn-default" })</a>
+	</div>
+
+</div>

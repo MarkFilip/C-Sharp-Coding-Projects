@@ -1,0 +1,16 @@
+﻿@model CarInsurance.Models.Table
+
+@{
+	ViewBag.Title = "QuoteDisplay";
+}
+
+<div class="jumbotron">
+	<h1 class="display-4">Your Quote</h1>
+	<p class="lead">@Model.FirstName @Model.LastName, thank you for applying for an insurance quote. We have have calculated your monthly quote from the information you provided. </p>
+	<hr class="my-4" />
+	<h2 class="display-4">$ @String.Format("{0:0.00}", Model.Quote) / month</h2>
+	<p class="lead">If you have any questions about your quote, Please contact us at 555-DONT-CALL.</p>
+</div>
+
+
+
