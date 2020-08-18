@@ -15,12 +15,12 @@
         <p>
             You can navigate through all 32 NFL teams and sort through their list of Players
         </p>
-        @Html.ActionLink("Teams", "Index", "Teams", new { @class = "btn btn-default" })
+        @Html.ActionLink("Teams", "Index", "Teams", null, new { @class = "btn btn-success" })
     </div>
 	<div class="col-md-6">
 		<h2>Players</h2>
 		<p>If you know what specific player you want, you can navigate to their page directly</p>
-		<a>@Html.ActionLink("Players", "Index", "Player", new { @class = "btn btn-default" })</a>
+		<a>@Html.ActionLink("Players", "Index", "Player", null, new { @class = "btn btn-success" })</a>
 	</div>
 
 </div>

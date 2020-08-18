@@ -3,26 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="~/Content/Images/favicon.ico" />
     <title>@ViewBag.Title - Fantasy Tracker</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				@Html.ActionLink("Fantasy Tracker", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li>@Html.ActionLink("Home", "Index", "Home")</li>
-					<li>@Html.ActionLink("Teams", "Index", "Teams")</li>
-					<li>@Html.ActionLink("Players", "Index", "Player")</li>
+			<img src="https://lh3.googleusercontent.com/proxy/gecuz1tRDs25ht9MnJi7dxzQ1AjHWGsCqDQ4GRXiEKwWoeImr0s_Y-VjYppdUIWqMJVMAGsZ6_5LDsuuPp4XXzAt9kovTPb_2evsdHE" width="30" height="30" alt="" loading="lazy">
+			<a class=" navbar-brand">Fantasy Tracker</a>
+			<div class="navbar-collapse \">
+				<ul class="navbar-nav">
+
+					<li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+					<li class="nav-item">@Html.ActionLink("Teams", "Index", "Teams", null, new { @class = "nav-link" })</li>
+					<li class="nav-item">@Html.ActionLink("Players", "Index", "Player", null, new { @class = "nav-link" })</li>
 				</ul>
 			</div>
 		</div>
